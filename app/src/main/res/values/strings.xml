@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">야추 : 야수의 심장</string>
+    <string name="hexa">헥사플</string>
+    <string name="play_yacht">야추하장</string>
+    <string name="ace">싱글</string>
+    <string name="duce">더블</string>
+    <string name="triple">트리플</string>
+    <string name="quad">쿼드러플</string>
+    <string name="penta">퀸튜플</string>
+    <string name="sum_up">위에꺼 합</string>
+    <string name="bonus_point">추가점수 [+35]</string>
+    <string name="choice">초이스</string>
+    <string name="fourcard">포카드</string>
+    <string name="fullhouse">풀하우스</string>
+    <string name="small_straight">S 스트레이트 [15]</string>
+    <string name="large_straight">L 스트레이트 [30]</string>
+    <string name="yacht">야추 [50]</string>
+    <string name="total_point">총점</string>
+    <string name="none">-</string>
+    <string name="restart">다시하기</string>
+    <string name="zero">0</string>
+</resources>
