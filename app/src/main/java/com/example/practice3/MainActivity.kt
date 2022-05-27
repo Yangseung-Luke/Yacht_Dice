@@ -1,20 +1,19 @@
 package com.example.practice3
 
 import android.content.DialogInterface
+import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Gravity
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import com.example.practice3.databinding.ActivityMainBinding
+import java.util.*
 
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var binding: ActivityMainBinding
+    lateinit var binding: com.example.practice3.databinding.ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,6 +54,7 @@ class MainActivity : AppCompatActivity() {
         val num_down = IntArray(6) { 0 }
         var sum_down: Int = 0
 
+        val Dice = arrayOfNulls<ImageView>(5)
 
         binding.aces.setOnClickListener {
             val myLayout = layoutInflater.inflate(R.layout.ace_dialog, null)
@@ -667,6 +667,138 @@ class MainActivity : AppCompatActivity() {
                 check_down[5] = false
                 check2 = false
                 Toast.makeText(this, "[야추] 초기화되었습니다", Toast.LENGTH_SHORT).show()
+                dialog.dismiss()
+            }
+        }
+
+        binding.dice.setOnClickListener {
+            val myLayout = layoutInflater.inflate(R.layout.dice_dialog, null)
+            val Dice_value = arrayOf<Int>(1, 1, 1, 1, 1)
+            val Throw_Dice: Button = myLayout.findViewById(R.id.okBtn)
+
+            val Dice_text = arrayOf<TextView>(myLayout.findViewById(R.id.text_1),
+                myLayout.findViewById(R.id.text_2),
+                myLayout.findViewById(R.id.text_3),
+                myLayout.findViewById(R.id.text_4),
+                myLayout.findViewById(R.id.text_5))
+
+            val Dice_button_Up = arrayOf<Button>(myLayout.findViewById(R.id.dice_ace),
+                myLayout.findViewById(R.id.dice_duece),
+                myLayout.findViewById(R.id.dice_triple),
+                myLayout.findViewById(R.id.dice_quad),
+                myLayout.findViewById(R.id.dice_penta),
+                myLayout.findViewById(R.id.dice_hexa))
+            val Dice_button_Down = arrayOf<Button>(myLayout.findViewById(R.id.dice_choice),
+                myLayout.findViewById(R.id.dice_fourcard),
+                myLayout.findViewById(R.id.dice_fullhouse),
+                myLayout.findViewById(R.id.dice_s_straight),
+                myLayout.findViewById(R.id.dice_l_straight),
+                myLayout.findViewById(R.id.dice_yacht))
+
+            val builder = AlertDialog.Builder(this).apply {
+                setView(myLayout)
+            }
+            val dialog = builder.create()
+            dialog.show()
+
+            Dice[0] = myLayout.findViewById(R.id.dice1)
+            Dice[1] = myLayout.findViewById(R.id.dice2)
+            Dice[2] = myLayout.findViewById(R.id.dice3)
+            Dice[3] = myLayout.findViewById(R.id.dice4)
+            Dice[4] = myLayout.findViewById(R.id.dice5)
+            val Chance: TextView = myLayout.findViewById(R.id.chance)
+            for (i in 0..4) Dice[i]?.setBackgroundResource(R.drawable.false_bg)
+            val stat = Array<Boolean>(5) { false }
+            var chance_Int = 0
+
+            for (i in 0..4) {
+                Dice[i]?.setOnClickListener {
+                    if(chance_Int==0)
+                        Toast.makeText(this, "고정시킬 수 없습니다", Toast.LENGTH_SHORT).show()
+                    else{
+                        stat[i] = !stat[i]
+                        if (stat[i]) Dice[i]?.setBackgroundResource(R.drawable.true_bg)
+                        else Dice[i]?.setBackgroundResource(R.drawable.false_bg)
+                    }
+                }
+            }
+
+            Throw_Dice.setOnClickListener {
+                val random = Random()
+                val diceID = arrayOf<Int>(R.drawable.dice_one,
+                    R.drawable.dice_two,
+                    R.drawable.dice_three,
+                    R.drawable.dice_four,
+                    R.drawable.dice_five,
+                    R.drawable.dice_six)
+                val rand = arrayOf<Int>(random.nextInt(6),
+                    random.nextInt(6),
+                    random.nextInt(6),
+                    random.nextInt(6),
+                    random.nextInt(6))
+                if (chance_Int < 3) {
+                    for (i in 0..4) if (!stat[i]) {
+                        Dice[i]?.setImageResource(diceID[rand[i]])
+                        Dice_value[i] = rand[i] + 1
+                        Dice_text[i].text = ("" + (rand[i] + 1))
+                    }
+                    Chance.text = ("Chance " + ++chance_Int + "/3")
+                } else {
+                    Toast.makeText(this, "더 이상 던질 수 없습니다", Toast.LENGTH_SHORT).show()
+                }
+            }
+            Dice_button_Up[0].setOnClickListener {
+
+            }
+        }
+        binding.reset.setOnClickListener {
+            val myLayout = layoutInflater.inflate(R.layout.reset_dialog, null)
+            val Reset: Button = myLayout.findViewById(R.id.okBtn)
+            val Cancel: Button = myLayout.findViewById(R.id.cancelBtn)
+
+            val builder = AlertDialog.Builder(this).apply {
+                setView(myLayout)
+            }
+            val dialog = builder.create()
+            dialog.show()
+            Reset.setOnClickListener {
+                round_number = 0
+                check1 = false
+                check2 = false
+                sum_up = 0
+                sum_down = 0
+                bonus_point = 0
+                for (i in 0..5) {
+                    num[i] = 0
+                    num_down[i] = 0
+                    check[i] = false
+                    check_down[i] = false
+                }
+                Round_Text.text = "Round 0/12"
+
+                Aces_Text.text = "-"
+                Dueces_Text.text = "-"
+                Triple_Text.text = "-"
+                Quad_Text.text = "-"
+                Penta_Text.text = "-"
+                Hexa_Text.text = "-"
+
+                TotalUp_Text.text = "-"
+                Bonus_Text.text = "-"
+
+                Choice_Text.text = "-"
+                Fourcard_Text.text = "-"
+                Fullhouse_Text.text = "-"
+                S_straight_Text.text = "-"
+                L_straight_Text.text = "-"
+                Yacht_Text.text = "-"
+
+                TotalDown_Text.text = "-"
+
+                Toast.makeText(this, "초기화 되었습니다", Toast.LENGTH_SHORT).show()
+                dialog.dismiss()
+            }
+            Cancel.setOnClickListener {
                 dialog.dismiss()
             }
         }

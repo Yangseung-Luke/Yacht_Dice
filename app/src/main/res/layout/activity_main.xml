@@ -550,12 +550,23 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/reset"
-                style="@style/Widget.Material3.Button.UnelevatedButton"
+                android:id="@+id/dice"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginStart="150dp"
-                android:layout_marginEnd="150dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_weight="1"
+                android:text="주사위 던지기"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/reset"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:layout_weight="1"
                 android:text="@string/restart"
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"

@@ -14,6 +14,7 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/Practice3/app/src/main/res/drawable/duece_background.xml" value="0.1235" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Practice3/app/src/main/res/drawable/duece_bg.xml" value="0.1235" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Practice3/app/src/main/res/drawable/duece_resize.xml" value="0.1085" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Practice3/app/src/main/res/drawable/false_bg.xml" value="0.194" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Practice3/app/src/main/res/drawable/fourcard_bg.xml" value="0.1235" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Practice3/app/src/main/res/drawable/fourcard_resize.xml" value="0.1085" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Practice3/app/src/main/res/drawable/fullhouse_bg.xml" value="0.1235" />
@@ -32,6 +33,7 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/Practice3/app/src/main/res/drawable/s_straight_resize.xml" value="0.1085" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Practice3/app/src/main/res/drawable/triple_bg.xml" value="0.1235" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Practice3/app/src/main/res/drawable/triple_resize.xml" value="0.1085" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Practice3/app/src/main/res/drawable/true_bg.xml" value="0.194" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Practice3/app/src/main/res/drawable/yacht_bg.xml" value="0.1235" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Practice3/app/src/main/res/drawable/yacht_resize.xml" value="0.1085" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Practice3/app/src/main/res/layout/ace_dialog.xml" value="0.22" />
@@ -39,6 +41,7 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/Practice3/app/src/main/res/layout/alertdialog_edittext.xml" value="0.28888888888888886" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Practice3/app/src/main/res/layout/choice_dialog.xml" value="0.24814814814814815" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Practice3/app/src/main/res/layout/custom_dialog.xml" value="0.3203125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Practice3/app/src/main/res/layout/dice_dialog.xml" value="0.33" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Practice3/app/src/main/res/layout/duece_dialog.xml" value="0.24814814814814815" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Practice3/app/src/main/res/layout/fourcard_dialog.xml" value="0.24814814814814815" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Practice3/app/src/main/res/layout/fullhouse_dialog.xml" value="0.24814814814814815" />
@@ -46,6 +49,7 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/Practice3/app/src/main/res/layout/large_straight_dialog.xml" value="0.24814814814814815" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Practice3/app/src/main/res/layout/penta_dialog.xml" value="0.24814814814814815" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Practice3/app/src/main/res/layout/quad_dialog.xml" value="0.24814814814814815" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Practice3/app/src/main/res/layout/reset_dialog.xml" value="0.2953703703703704" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Practice3/app/src/main/res/layout/small_straight_dialog.xml" value="0.24814814814814815" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Practice3/app/src/main/res/layout/triple_dialog.xml" value="0.24814814814814815" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Practice3/app/src/main/res/layout/yacht_dialog.xml" value="0.24814814814814815" />
